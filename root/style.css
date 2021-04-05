@@ -114,7 +114,9 @@ figure,
 figcaption,
 dl,
 dd {
-  margin: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow-wrap: normal;
 }
 
 /* Make default font-size 1rem and add smooth scrolling to anchors */
@@ -151,6 +153,8 @@ body {
 p {
   text-align: justify;
   hyphens: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   margin-top: 1rem;
@@ -528,11 +532,15 @@ h2 {
   font-size: 1.7rem;
   line-height: 2rem;
   margin-top: 3rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 h3 {
   font-size: 1.4rem;
   margin-top: 2.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 h4 {
@@ -599,6 +607,7 @@ h6 {
   background-color: rgb(255, 255, 255);
   overflow-x: auto;
   text-align: center;
+  border-right: 1px solid;
 }
 
 /* Control the right side */
