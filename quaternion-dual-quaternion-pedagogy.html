@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Peoples: Quatnerion/DualQuaternion Pedagogy</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="prism/prism.css" />
+</head>
+
+<div class="split left">
+  <h2>
+    Navigation
+  </h2>
+  <h4>
+    <a href="index.html">Home</a>
+    <br>
+    <br>
+    Hamiltonian Mathematics Library
+    <br>
+    <br>
+    <a href="c-geometry.html">C-Geometry</a>
+    <br>
+    <br>
+    Algorithmic Art
+    <br>
+    <br>
+    <a href="quaternion-dual-quaternion-pedagogy.html">Quaternion and Dual Quaternion Pedagogy</a>
+  </h4>
+</div>
+
+<body id="top"></body>
+  <div class="split right">
+  <main>
+    <div class="centered">
+      <header>
+        <h1>
+            Mathematics $\cap$ Geospatial Science $\cap$ Computer Science
+            <br>
+            <br>
+            <i>A Pedagogy for the Quaternions and Dual Quaternions</i>
+          </h1>
+      </header>
+      <div class="abstract">
+        <h2>
+          Abstract
+        </h2>
+        <p>
+					With regard to their general use and understanding by the public, the Quaternions, $\mathbb{H}$ suffer from a reputation for being complex and unintuitive; a reputation unearned and perpepuated by those improperly ingratiated into their underlying mechanics. Information on quaternions is very easily accessible, as are a great number of visualizations and interactive sites. Dual Quaternions, $\mathbb{H}\left[X\right]/\langle X^{2} \rangle$, too suffer from a reputation for being complex and unintuitive, however, in addition to this, information and visualizations of their underlying mechanics, and general existence, is much harder to come by in comparison to quaternions. Presented are a number of visualizations and explanations which attempt to convey the underlying elegance of both the Quaternions and Dual Quaternions in a manner which is palatable to those not ingratiated with complex spaces, dual number algebra, or advanced mathematical notation.
+        </p>
+      </div>
+			<div>
+				<h2>
+					Introduction
+				</h2>
+				<h3>
+					Quaternions
+				</h3>
+				<h3>
+					Dual Numbers
+				</h3>
+				<h3>
+					Dual Quaternions
+				</h3>
+				<h2>
+					Quaternion Methods
+				</h2>
+				<h3>
+					Rotations in the Plane
+				</h3>
+				<h3>
+					The Plane of Rotations
+				</h3>
+				<h3>
+					Visualizations
+				</h3>
+				<h2>
+					Dual Quaternions
+				</h2>
+				<h3>
+					Screw Axes and Transformations
+				</h3>
+				<h3>
+					Visualizations
+				</h3>
+			</div>
+    </div>
+  </main>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'],],
+      },
+    }
+    const toggle = document.getElementById('typeface-toggle')
+    const typeface = document.getElementById('typeface')
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('libertinus')
+      typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+    })
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="prism/prism.js"></script>
+
+  <script async defer data-domain="latex.now.sh" src="https://plausible.io/js/plausible.js"></script>
+</body>
+
+</html>
