@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGSCS: Classical Lagrangian Mechanics</title>
+  <meta name="google-site-verification" content="pLy4rPs30LAyB0NRgejUBLBCvkpfDeFcIkzvNbgdr7k"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<div class="split left">
+	<h2>
+    Navigation
+	</h2>
+	<h4>
+		<a href="../index.html">Home</a>
+		<br>
+		<br>
+		Hamiltonian Mathematics Library
+		<br>
+		<br>
+		<a href="../c-geometry.html">C-Geometry</a>
+		<br>
+		<br>
+		<a href="../algorithmic-art.html">Algorithmic Art</a>
+		<br>
+		<br>
+		<a href="../quaternion-dual-quaternion-pedagogy.html">Quaternion and Dual Quaternion Pedagogy</a>
+		<br>
+		<br>
+		<a href="../misc-notes.html">Miscellaneous Notes</a>
+		<br>
+		<br>
+		<a href="../mgscs-bibliography.html">MGSCS Compiled Bibliographies</a>
+	</h4>
+</div>
+
+<body id="top"></body>
+  <div class="split right">
+  <main>
+    <div class="centered">
+      <header>
+        <h1>
+          Mathematics $\cap$ Geospatial Science $\cap$ Computer Science
+        <br>
+        <br>
+        <i>Classical Lagrangian Mechanics</i>
+        </h1>
+      </header>
+      <h2>
+          Introduction
+      </h2>
+      <p>
+        Start with the ever familiar Newtonian mechanics approach; the sum of all forces:
+        $$
+        \begin{equation}\label{eq:newtonian-mechanics}
+            \sum{\vec{F} = m\vec{a}}
+        \end{equation}
+        $$
+        Let us first consider acceleration, $\vec{a}$. Recall standard kinematics with calculus; for some arbitrary coordinate $x$:
+        $$
+        \begin{gather}
+            v=\dot{x}\label{eq:x-dot}\\
+            a=\dot{v}=\ddot{x}\label{eq:x-ddot}
+        \end{gather}
+        $$
+        A logical continuation of this is to break down the elements of eq.$~\ref{eq:newtonian-mechanics}$ using eqs.$~\ref{eq:x-dot}$,$\ref{eq:x-ddot}$, for each coordinate we consider. Assume for a moment, a two dimensional problem described in the cartesian coordinate space, implying $x,y$ coordinates. If for each coordinate axis there exists and acceleration, it follows that, due to the mass of the object being accelerated, there exists at least one force on that mass in this direction. Equation$~\ref{eq:newtonian-mechanics}$ then breaks down in a per-axis manner:
+        $$
+        \begin{gather}
+            \sum{F_{x}=ma_{x}=m\ddot{x}}\label{eq:sum-x-ddot}\\
+            \sum{F_{y}=ma_{y}=m\ddot{y}}\label{eq:sum-y-ddot}
+        \end{gather}
+        $$
+        Suppose that this system is a pendulum, represented in cartesian space, acted upon by a gravitational force $\vec{g}$, acting in the $-y$ direction. The position of this pendulum is neatly describe in a polar coordinate system, which is easily converted to cartesian coordinates. Let the rod that the pendulum is attached to be massless and stiff, to make things easy. It then becomes possible to describe this pendulum simply as an angle, $\theta$ between the rod and <i>any axis</i>, and a distance, $\rho$, from the origin equal to the length, $\ell$, of the rod of the pendulum. For this pendulum problem, let $-y$ be this axis which $\theta$ is measured relative to, hence, as $\theta\rightarrow 0$, $y\rightarrow -\ell$ and $x\rightarrow 0$. It follows then that:
+        $$
+        \begin{gather}
+            x=\ell\sin{\theta}\label{eq:l-sin-theta}\\
+            y=-\ell\cos{\theta}\label{eq:l-cos-theta}
+        \end{gather}
+        $$
+        Considering for a moment eq.$~\ref{eq:l-sin-theta}$ double derived such that we can fulfill eq.$~\ref{eq:sum-x-ddot}$, the following equation for $\ddot{x}$ is produced:
+        $$
+        \begin{gather*}
+            \frac{d}{d\theta}\left(\frac{d}{d\theta}\left(\ell\sin{\theta})\right)\right)\\
+            =\\
+            \frac{d}{d\theta}\left(\ell\cos{\theta}\dot{\theta}\right)\\
+            =\\
+            -\ell\sin{\theta}\ddot{\theta}^{2}+\ell\cos{\theta}\ddot{\theta}\\
+            \therefore
+        \end{gather*}
+				$$
+				$$
+        \begin{equation}\label{eq:big-x-sum}
+            \sum{F_{x}}=ma_{x}=-m\ell\sin{\theta}\ddot{\theta}^{2}+m\ell\cos{\theta}\ddot{\theta}
+        \end{equation}
+        $$
+        The more nuanced $\ddot{y}$ requires gravity to be considered. Recalling that $m\ddot{y}$ is a <i>force</i>, it is to be summed (with any other pre-existing force due to acceleration) according to eq.$~\ref{eq:sum-y-ddot}$, hence:
+        $$
+        \begin{equation}\label{eq:m-vec-g}
+            \sum{F_{y}}=ma_{y} + m\vec{g} = m\ddot{y}+m\vec{g}
+        \end{equation}
+        $$
+        Where $m\ddot{y}$ is simply the double derivative of eq.$~\ref{eq:l-cos-theta}$. The process to arrive at a more explicit (and $\theta$ based) summation similar to eq.$~\ref{eq:m-vec-g}$ is similar to the process used to arrive at eq.$~\ref{eq:big-x-sum}$:
+        $$
+        \begin{gather*}
+            \frac{d}{d\theta}\left(\frac{d}{d\theta}\left(-\ell\cos{\theta})\right)\right)\\
+            =\\
+            \frac{d}{d\theta}\left(\ell\sin{\theta}\dot{\theta}\right)\\
+            =\\
+            \ell\cos{\theta}\ddot{\theta}^{2}+\ell\sin{\theta}\ddot{\theta}\\
+            \therefore
+        \end{gather*}
+				$$
+				$$
+        \begin{equation}\label{eq:pre-big-y-sum}
+            \sum{F_{y}=ma_{y}+m\vec{g}=m\ell\cos{\theta}\dot{\theta}^{2}+m\ell\sin{\theta}\ddot{\theta}}+m\vec{g}
+        \end{equation}
+        $$
+        As established earlier, $\vec{g}$ has no $x$ component in the coordinate system established for this problem, which removes the somewhat out of place $\vec{g}$ vector from eq.$~\ref{eq:pre-big-y-sum}$, our otherwise scalar equation. This then leaves our derivation neatly at:
+        $$
+        \begin{equation}\label{eq:big-y-sum}
+        \sum{F_{y}=ma_{y}+m\vec{g}=m\ell\cos{\theta}\dot{\theta}^{2}+m\ell\sin{\theta}\ddot{\theta}}+mg
+        \end{equation}
+        $$
+        Admittedly, eqs.$~\ref{eq:big-x-sum}$ and$~\ref{eq:big-y-sum}$ are not quite elegant or approachable:
+        $$
+        \begin{gather*}
+            \sum{F_{x}}=ma_{x}=-m\ell\sin{\theta}\ddot{\theta}^{2}+m\ell\cos{\theta}\ddot{\theta}\\
+            \sum{F_{y}=ma_{y}+m\vec{g}=m\ell\cos{\theta}\dot{\theta}^{2}+m\ell\sin{\theta}\ddot{\theta}}+mg
+        \end{gather*}
+        $$
+        Additionally, while the original coordinate space was cartesian, polar coordinates seemingly arose from nothing, as if to suggest polar coordinates (and thus <i>torques</i>) are a much more appropriate coordinate space for this problem.
+        <p style="text-align: center">
+            Suppose there is a simpler, more elegant way to accomplish what was done in the above equations.
+				</p>
+      </p>
+			<h2>
+				A More Elegant Mechanics &mdash; The Lagrangian
+			</h2>
+			<h3>
+				Important Equations
+			</h3>
+			<p>
+        Put simply, the Lagrangian, $\mathcal{L}$, is the difference between kinetic, $\mathcal{T}$, and potential, $\mathcal{V}$ energies:
+				$$
+        \begin{equation}\label{eq:raw-lagrangian}
+            \mathcal{L}=\mathcal{T}-\mathcal{{V}}
+        \end{equation}
+				$$
+        This relationship is valid across any coordinate system which faithfully recreates the system of study. From this Lagrangian, the equations of motion of this system are an ``Euler-Lagrange'' equation away from the presently held formulae in eq.$~\ref{eq:raw-lagrangian}$:
+        $$
+				\begin{equation}
+            \frac{d}{dt}\left(\frac{\delta\mathcal{L}}{\delta\dot{j}}\right)-\frac{\delta\mathcal{L}}{\delta j}=0\text{,\:}\forall j
+        \end{equation}
+				$$
+      </p>
+    </div>
+  </main>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'],],
+        tags: 'ams'
+      },
+    }
+    const toggle = document.getElementById('typeface-toggle')
+    const typeface = document.getElementById('typeface')
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('libertinus')
+      typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+    })
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="prism/prism.js"></script>
+
+  <script async defer data-domain="latex.now.sh" src="https://plausible.io/js/plausible.js"></script>
+
+  <script>
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    } 
+  </script>
+</body>
+
+</html>
