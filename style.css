@@ -677,3 +677,44 @@ If you want the content centered horizontally and vertically
 .FLIR-Spinnaker-Integration {
   grid-area: FLIR-Spinnaker-Integration;
 }
+
+.sections-container {
+  /* border-left: 20%;
+  border-right: 20%; */
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 10% 10% 10%;
+  gap: 5% 10%;
+  grid-template-areas:
+    "Hamiltonian-Mathematics-Library C-Geometry"
+    "Algorithmic-Art Quaternion-and-Dual-Quaternion-Pedagogy"
+    "Miscellaneous-Notes MGSCS-Compiled-Bibliographies"
+}
+
+.Hamiltonian-Mathematics-Library { 
+  grid-area: Hamiltonian-Mathematics-Library;
+}
+
+.C-Geometry {
+  grid-area: C-Geometry; 
+}
+
+.Algorithmic-Art { 
+  grid-area: Algorithmic-Art;
+}
+
+.Quaternion-and-Dual-Quaternion-Pedagogy {
+  grid-area: Quaternion-and-Dual-Quaternion-Pedagogy; 
+}
+
+.Miscellaneous-Notes {
+  grid-area: Miscellaneous-Notes;
+}
+
+.MGSCS-Compiled-Bibliographies {
+  grid-area: MGSCS-Compiled-Bibliographies;
+}
