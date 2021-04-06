@@ -5,30 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google-site-verification" content="pLy4rPs30LAyB0NRgejUBLBCvkpfDeFcIkzvNbgdr7k"/>
-  <title>Oliver Peoples: Quatnerion/DualQuaternion Pedagogy</title>
+  <title>MGSCS: Algorithmic Art</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="prism/prism.css" />
 </head>
 
 <div class="split left">
-  <h2>
+	<h2>
     Navigation
-  </h2>
-  <h4>
-    <a href="index.html">Home</a>
-    <br>
-    <br>
-    Hamiltonian Mathematics Library
-    <br>
-    <br>
-    <a href="c-geometry.html">C-Geometry</a>
-    <br>
-    <br>
-    <a href="algorithmic-art.html">Algorithmic Art</a>
-    <br>
-    <br>
-    <a href="quaternion-dual-quaternion-pedagogy.html">Quaternion and Dual Quaternion Pedagogy</a>
-  </h4>
+	</h2>
+	<h4>
+		<a href="index.html">Home</a>
+		<br>
+		<br>
+		Hamiltonian Mathematics Library
+		<br>
+		<br>
+		<a href="c-geometry.html">C-Geometry</a>
+		<br>
+		<br>
+		<a href="algorithmic-art.html">Algorithmic Art</a>
+		<br>
+		<br>
+		<a href="quaternion-dual-quaternion-pedagogy.html">Quaternion and Dual Quaternion Pedagogy</a>
+		<br>
+		<br>
+		<a href="misc-notes.html">Miscellaneous Notes</a>
+		<br>
+		<br>
+		<a href="mgscs-bibliography.html">MGSCS Compiled Bibliographies</a>
+	</h4>
 </div>
 
 <body id="top"></body>
@@ -40,7 +46,7 @@
             Mathematics $\cap$ Geospatial Science $\cap$ Computer Science
             <br>
             <br>
-            <i>A Pedagogy for the Quaternions and Dual Quaternions</i>
+            <i>Algorithmic Art</i>
           </h1>
       </header>
       <div class="abstract">
@@ -48,7 +54,7 @@
           Abstract
         </h2>
         <p>
-            With regard to their general use and understanding by the public, the Quaternions, $\mathbb{H}$ suffer from a reputation for being complex and unintuitive; a reputation unearned and perpepuated by those improperly ingratiated into their underlying mechanics. Information on quaternions is very easily accessible, as are a great number of visualizations and interactive sites. Dual Quaternions, $\mathbb{H}\left[X\right]/\langle X^{2} \rangle$, too suffer from a reputation for being complex and unintuitive, however, in addition to this, information and visualizations of their underlying mechanics, and general existence, is much harder to come by in comparison to quaternions. Presented are a number of visualizations and explanations which attempt to convey the underlying elegance of both the Quaternions and Dual Quaternions in a manner which is palatable to those not ingratiated with complex spaces, dual number algebra, or advanced mathematical notation.
+          Computational and 
         </p>
       </div>
       <div>
@@ -93,6 +99,14 @@
   <script async src="prism/prism.js"></script>
 
   <script async defer data-domain="latex.now.sh" src="https://plausible.io/js/plausible.js"></script>
+
+  $(function () {
+    var includes = $('[data-include]')
+    $.each(includes, function () {
+      var file = $(this).data('include') + '.html'
+      $(this).load(file)
+    })
+  })
 </body>
 
 </html>

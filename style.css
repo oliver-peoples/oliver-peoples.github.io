@@ -234,9 +234,15 @@ table {
   border-spacing: 0;
   width: auto;
   max-width: 80%;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
   border-top: 2.27px solid black;
   border-bottom: 2.27px solid black;
-  /* display: block; */
+  display: block;
   overflow-x: auto; /* does not work because element is not block */
   /* white-space: nowrap; */
   counter-increment: caption;
@@ -260,7 +266,7 @@ table > tbody > tr:last-child > th {
 
 th,
 td {
-  text-align: left;
+  text-align: justify;
   padding: 0.5rem;
   line-height: 1.1;
 }
@@ -595,13 +601,12 @@ h6 {
   position: fixed;
   z-index: 1;
   top: 0;
+  padding-top: 2.5%;
   overflow-x: hidden;
-  padding-top: 5%;
 }
 
 /* Control the left side */
 .left {
-  padding-top: 5%;
   left: 0;
   width: 20%;
   background-color: rgb(248,248,255);
@@ -613,7 +618,6 @@ h6 {
 /* Control the right side */
 .right {
   right: 0;
-  padding-top: 5%;
   width: 80%;
   background-color: rgb(248,248,255);
 }
@@ -631,4 +635,45 @@ If you want the content centered horizontally and vertically
 .centered img {
   width: 150px;
   border-radius: 50%;
+}
+
+.grid-container {
+  /* border-left: 20%;
+  border-right: 20%; */
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 10% 10% 10%;
+  gap: 5% 10%;
+  grid-template-areas:
+    "Classical-Lagrangian-Mechanics Classical-Hamiltonian-Mechanics"
+    "Quantum-Lagrangian-Mechanics Quantum-Hamiltonian-Mechanics"
+    "Xsens-MTi-CPP-Integration FLIR-Spinnaker-Integration"
+}
+
+.Classical-Lagrangian-Mechanics { 
+  grid-area: Classical-Lagrangian-Mechanics;
+}
+
+.Classical-Hamiltonian-Mechanics {
+  grid-area: Classical-Hamiltonian-Mechanics; 
+}
+
+.Quantum-Lagrangian-Mechanics { 
+  grid-area: Quantum-Lagrangian-Mechanics;
+}
+
+.Quantum-Hamiltonian-Mechanics {
+  grid-area: Quantum-Hamiltonian-Mechanics; 
+}
+
+.Xsens-MTi-CPP-Integration {
+  grid-area: Xsens-MTi-CPP-Integration;
+}
+
+.FLIR-Spinnaker-Integration {
+  grid-area: FLIR-Spinnaker-Integration;
 }

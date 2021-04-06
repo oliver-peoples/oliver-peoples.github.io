@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="google-site-verification" content="pLy4rPs30LAyB0NRgejUBLBCvkpfDeFcIkzvNbgdr7k"/>
+  <title>oliver-peoples: Miscellaneous Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="prism/prism.css" />
+</head>
+
+<div class="split left">
+	<h2>
+    Navigation
+	</h2>
+	<h4>
+		<a href="index.html">Home</a>
+		<br>
+		<br>
+		Hamiltonian Mathematics Library
+		<br>
+		<br>
+		<a href="c-geometry.html">C-Geometry</a>
+		<br>
+		<br>
+		<a href="algorithmic-art.html">Algorithmic Art</a>
+		<br>
+		<br>
+		<a href="quaternion-dual-quaternion-pedagogy.html">Quaternion and Dual Quaternion Pedagogy</a>
+		<br>
+		<br>
+		<a href="misc-notes.html">Miscellaneous Notes</a>
+		<br>
+		<br>
+		<a href="mgscs-bibliography.html">MGSCS Compiled Bibliographies</a>
+	</h4>
+</div>
+
+<body id="top"></body>
+  <div class="split right">
+  <main>
+		<header>
+			<h1>
+					Mathematics $\cap$ Geospatial Science $\cap$ Computer Science
+					<br>
+					<br>
+					<i>Miscellaneous Notes</i>
+				</h1>
+		</header>
+		<div class="abstract">
+			<h2>
+				About
+			</h2>
+			<p style="text-align: center;">
+				I am no html, css, let alone javascript, wizard. My sidebar was getting full, and I aim to keep the sidebar focused on the immediately interesting or important things, like personal projects, library documentation, etc. Everything else that is a bit more extraneous (and in particular not really novel) shall go in this section. Things like notes for various classes that are part of my degree, reports that I am particularly proud of, conjectures I have no business making, random little things like that.
+			</p>
+		</div>
+		<div class="grid-container">
+			<div class="Classical-Lagrangian-Mechanics">
+				<h2>
+					Classical Lagrangian Mechanics
+				</h2>
+				<p style="text-align: center;">
+					Notes collated over time (and classes) regarding classical lagrangian mechanics.
+					<br>
+					<a href="classical_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="classical_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+			<div class="Classical-Hamiltonian-Mechanics">
+				<h2>
+					Classical Hamiltonian Mechanics
+				</h2>
+				<p style="text-align: center;">
+					Notes collated over time (and classes) regarding Quantum lagrangian mechanics.
+					<br>
+					<a href="quantum_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="quantum_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+			<div class="Quantum-Lagrangian-Mechanics">
+				<h2>
+					Quantum Lagrangian Mechanics
+				</h2>
+				<p style="text-align: center;">
+					Notes collated over time (and classes) regarding Quantum lagrangian mechanics.
+					<br>
+					<a href="quantum_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="quantum_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+			<div class="Quantum-Hamiltonian-Mechanics">
+				<h2>
+					Quantum Hamiltonian Mechanics
+				</h2>
+				<p style="text-align: center;">
+					Notes collated over time (and classes) regarding Quantum lagrangian mechanics.
+					<br>
+					<a href="quantum_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="quantum_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+			<div class="Xsens-MTi-CPP-Integration;">
+				<h2>
+					Xsens MTi AHRS/IMU C++ Integrationn (Linux)
+				</h2>
+				<p style="text-align: center;">
+					I have found these little sensors to be an absolute pain to integrate into most projects. There is very little <i>useful</i> information on just how to integrate them, complete with file structures, CMakeLists.txt examples, and C++ examples.
+					<br>
+					<a href="quantum_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="quantum_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+			<div class="FLIR-Spinnaker-Integration">
+				<h2>
+					FLIR Spinnaker C++ SDK Integration (Linux)
+				</h2>
+				<p style="text-align: center;">
+					FLIR makes some absolutely wonderful little machine vision cameras- I have two of my own personal Chameleon 3.2MP cameras. However, the Spinnaker SDK can be a little bit tricky to get working on Linux, I have provided examples of their integration, complete with CMakeLists.txt examples, and C++ examaples, as well as a small little machine vision utilities library on my github.
+					<br>
+					<a href="quantum_lagrangian_mechanics.pdf" download>PDF Version</a>
+					<br>
+					<a href="quantum_lagrangian_mechanics.html">Site</a>
+				</p>
+			</div>
+		</div>
+  </main>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'],],
+      },
+    }
+    const toggle = document.getElementById('typeface-toggle')
+    const typeface = document.getElementById('typeface')
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('libertinus')
+      typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+    })
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="prism/prism.js"></script>
+
+  <script async defer data-domain="latex.now.sh" src="https://plausible.io/js/plausible.js"></script>
+</body>
+
+</html>
